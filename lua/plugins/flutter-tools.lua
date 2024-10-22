@@ -10,6 +10,7 @@ return {
   end,
   config = true,
   opts = {
+    fvm = true,
     dev_log = {
       open_cmd = "20new",
     },
