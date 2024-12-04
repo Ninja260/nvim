@@ -15,6 +15,6 @@ return {
       less = { "prettierd" },
       -- Add more file types if needed
     },
-    format_on_save = true,
+    -- format_on_save = true,
   },
 }
