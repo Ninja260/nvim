@@ -27,8 +27,8 @@ vim.keymap.set({ "n", "x" }, "ga", SwitchRecent)
 vim.keymap.set({ "n", "x" }, "g.", GoToLastEditLocation)
 
 -- Brackets
-vim.keymap.set("n", "[d", GoPrevErrorInFiles)
-vim.keymap.set("n", "]d", GoNextErrorInFiles)
+vim.keymap.set("n", "[g", GoPrevErrorInFiles, { noremap = true })
+vim.keymap.set("n", "]g", GoNextErrorInFiles, { noremap = true })
 
 -- View
 vim.keymap.set("n", "zg", OpenView)
