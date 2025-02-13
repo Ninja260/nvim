@@ -7,6 +7,12 @@ return {
     "stevearc/dressing.nvim", -- optional for vim.ui.select
   },
   init = function()
+    -- to use json formatter for arb filetype
+    vim.filetype.add({
+      extension = {
+        arb = "json",
+      },
+    })
     -- require("telescope").load_extension("flutter")
   end,
   config = true,
