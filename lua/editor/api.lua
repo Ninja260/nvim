@@ -85,26 +85,26 @@ function OpenView()
   vscode.call("workbench.action.openView")
 end
 
-function SwtichViewLeft()
+function SwitchToLeftView()
   vscode.call("workbench.action.navigateLeft")
 end
 
-function SwitchViewRight()
+function SwitchToRightView()
   vscode.call("workbench.action.navigateRight")
 end
 
-function SwitchViewAbove()
+function SwitchToAboveView()
   vscode.call("workbench.action.navigateUp")
 end
 
-function SwitchViewBelow()
+function SwitchToBelowView()
   vscode.call("workbench.action.navigateDown")
 end
 
-function SplitEditorDown()
+function SplitToDownEditor()
   vscode.call("workbench.action.splitEditorDown")
 end
 
-function SplitEditorRight()
+function SplitToRightEditor()
   vscode.call("workbench.action.splitEditorRight")
 end

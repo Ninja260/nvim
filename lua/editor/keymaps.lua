@@ -31,12 +31,12 @@ vim.keymap.set("n", "[g", GoPrevErrorInFiles, { noremap = true })
 vim.keymap.set("n", "]g", GoNextErrorInFiles, { noremap = true })
 
 -- Switch View
-vim.keymap.set("n", "<leader>wh", SwtichViewLeft, { noremap = true, description = "Switch View Left" })
-vim.keymap.set("n", "<leader>wl", SwitchViewRight, { noremap = true, description = "Switch View Right" })
-vim.keymap.set("n", "<leader>wj", SwitchViewBelow, { noremap = true, description = "Switch View Below" })
-vim.keymap.set("n", "<leader>wk", SwitchViewAbove, { noremap = true, description = "Switch View Above" })
-vim.keymap.set("n", "<leader>ws", SplitEditorDown, { noremap = true, description = "Split Editor Down" })
-vim.keymap.set("n", "<leader>wv", SplitEditorRight, { noremap = true, description = "Split Editor Right" })
+vim.keymap.set("n", "<leader>wh", SwitchToLeftView, { noremap = true, desc = "Switch To View Left" })
+vim.keymap.set("n", "<leader>wl", SwitchToRightView, { noremap = true, desc = "Switch To View Right" })
+vim.keymap.set("n", "<leader>wj", SwitchToBelowView, { noremap = true, desc = "Switch To View Below" })
+vim.keymap.set("n", "<leader>wk", SwitchToAboveView, { noremap = true, desc = "Switch To View Above" })
+vim.keymap.set("n", "<leader>ws", SplitToDownEditor, { noremap = true, desc = "Split To Editor Down" })
+vim.keymap.set("n", "<leader>wv", SplitToRightEditor, { noremap = true, desc = "Split To Editor Right" })
 
 -- View
 vim.keymap.set("n", "zg", OpenView)
