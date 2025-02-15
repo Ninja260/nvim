@@ -13,8 +13,8 @@ return {
         arb = "json",
       },
     })
-    vim.keymap.set("n", "<leader>cL", "<cmd>FlutterLogToggle<cr>", { desc = "Flutter:Toggle Log" })
-    vim.keymap.set("n", "<leader>co", "<cmd>FlutterOutlineToggle<cr>", { desc = "Flutter:Toggle Outline" })
+    vim.keymap.set("n", "<leader>al", "<cmd>FlutterLogToggle<cr>", { desc = "Flutter:Toggle Log" })
+    vim.keymap.set("n", "<leader>ao", "<cmd>FlutterOutlineToggle<cr>", { desc = "Flutter:Toggle Outline" })
 
     -- require("telescope").load_extension("flutter")
   end,

@@ -40,10 +40,10 @@ vim.keymap.set("n", "<leader>wv", SplitToRightEditor, { noremap = true, desc = "
 
 -- View
 vim.keymap.set("n", "zg", OpenView)
-vim.keymap.set("n", "<leader>u[", TogglePrimarySideBarVisibility, { noremap = true, desc = "Toggle Primary Sidebar" })
+vim.keymap.set("n", "<leader>ap", TogglePrimarySideBarVisibility, { noremap = true, desc = "Toggle Primary Sidebar" })
 vim.keymap.set(
   "n",
-  "<leader>u]",
+  "<leader>as",
   ToggleSecondarySideBarVisibility,
   { noremap = true, desc = "Toggle Secondary Sidebar" }
 )
