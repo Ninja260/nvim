@@ -37,6 +37,7 @@ vim.keymap.set("n", "<leader>wj", SwitchToBelowView, { noremap = true, desc = "S
 vim.keymap.set("n", "<leader>wk", SwitchToAboveView, { noremap = true, desc = "Switch To View Above" })
 vim.keymap.set("n", "<leader>ws", SplitToDownEditor, { noremap = true, desc = "Split To Editor Down" })
 vim.keymap.set("n", "<leader>wv", SplitToRightEditor, { noremap = true, desc = "Split To Editor Right" })
+vim.keymap.set("n", "<leader>wo", CloseOtherEditorsInGroup, { noremap = true, desc = "Close Other Editors" })
 
 -- View
 vim.keymap.set("n", "zg", OpenView)

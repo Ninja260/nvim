@@ -109,6 +109,10 @@ function SplitToRightEditor()
   vscode.call("workbench.action.splitEditorRight")
 end
 
+function CloseOtherEditorsInGroup()
+  vscode.call("workbench.action.closeOtherEditors")
+end
+
 function TogglePrimarySideBarVisibility()
   vscode.call("workbench.action.toggleSidebarVisibility")
 end
