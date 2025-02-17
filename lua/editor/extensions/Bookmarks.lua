@@ -13,6 +13,18 @@ function BookmarksToggleLabeled()
   vscode.call("bookmarks.toggleLabeled")
 end
 
+function BookmarksToggle()
+  vscode.call("bookmarks.toggle")
+end
+
+function BookmarksJumpToNext()
+  vscode.call("bookmarks.jumpToNext")
+end
+
+function BookmarksJumpToPrevious()
+  vscode.call("bookmarks.jumpToPrevious")
+end
+
 function BookmarksClear()
   require("vscode").call("bookmarks.clear")
 end
@@ -22,7 +34,10 @@ function BookmarksClearAll()
 end
 
 -- Keymaps
-vim.keymap.set("n", "m", BookmarksToggleLabeled)
+vim.keymap.set("n", "m", BookmarksToggle)
+vim.keymap.set("n", "M", BookmarksToggleLabeled)
+vim.keymap.set("n", "]j", BookmarksJumpToNext)
+vim.keymap.set("n", "[j", BookmarksJumpToPrevious)
 vim.keymap.set("n", "<leader>j", BookmarksList)
 vim.keymap.set("n", "<leader>J", BookmarksWorkspaceList)
 
