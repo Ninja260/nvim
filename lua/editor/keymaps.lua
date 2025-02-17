@@ -49,6 +49,7 @@ vim.keymap.set(
   { noremap = true, desc = "Toggle Secondary Sidebar" }
 )
 vim.keymap.set("n", "<leader>kb", TogglePanelVisitiblity, { noremap = true, desc = "Toggle Panel" })
+vim.keymap.set("n", "<leader>kz", ToggleZenMode, { noremap = true, desc = "Toggle Zen Mode" })
 
 -- Tmux Like behavior
 vim.keymap.set("n", "<C-a>s", SwitchWindow)

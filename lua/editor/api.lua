@@ -117,10 +117,14 @@ function TogglePrimarySideBarVisibility()
   vscode.call("workbench.action.toggleSidebarVisibility")
 end
 
+function ToggleSecondarySideBarVisibility()
+  vscode.call("workbench.action.toggleAuxiliaryBar")
+end
+
 function TogglePanelVisitiblity()
   vscode.call("workbench.action.togglePanel")
 end
 
-function ToggleSecondarySideBarVisibility()
-  vscode.call("workbench.action.toggleAuxiliaryBar")
+function ToggleZenMode()
+  vscode.call("workbench.action.toggleZenMode")
 end
