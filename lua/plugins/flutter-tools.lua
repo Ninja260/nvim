@@ -23,6 +23,9 @@ return {
     fvm = true,
     dev_log = {
       open_cmd = "20new",
+      filter = function(line)
+        return line ~= nil and not string.find(line, "GED_ERROR_FAIL")
+      end,
     },
   },
 }
