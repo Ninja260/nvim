@@ -25,6 +25,7 @@ return {
   opts = {
     fvm = true,
     debugger = {
+      enabled = true,
       -- don't catch any exceptions
       exception_breakpoints = {},
     },
