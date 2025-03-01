@@ -1,0 +1,111 @@
+{
+  "Bloc Builer Snippet": {
+    "perfix": "blocbuilder",
+    "body": [
+      "BlocBuilder<${1:Subject}${2|Bloc,Cubit|}, $1State>(",
+      "  builder: (context, state) {",
+      "    return ${0:widget};",
+      "  }",
+      ")"
+    ]
+  },
+  "Bloc Selector Snippet": {
+    "perfix": "blocselector",
+    "body": [
+      "BlocSelector<${1:Subject}${2|Bloc,Cubit|}, $1State, ${3:SelectedState}>(",
+      "  selector: (state) {",
+      "    return ${4:state};",
+      "  },",
+      "  builder: (context, state) {",
+      "    return ${0:widget};",
+      "  },",
+      ")"
+    ]
+  },
+  "Bloc Listener Snippet": {
+    "perfix": "bloclistener",
+    "body": [
+      "BlocListener<${1:Subject}${2|Bloc,Cubit|}, $1State>(",
+      "  listener: (context, state) {",
+      "    ${3:// TODO: implement listener}",
+      "  },",
+      "  child: ${widget},",
+      ")"
+    ]
+  },
+  "Bloc Provider Snippet": {
+    "perfix": "blocprovider",
+    "body": [
+      "BlocProvider(",
+      "  create: (context) => ${1:Subject}${2|Bloc,Cubit|}(),",
+      "  child: ${widget},",
+      ")"
+    ]
+  },
+  "Bloc Consumer Snippet": {
+    "perfix": "blocconsumer",
+    "body": [
+      "BlocConsumer<${1:Subject}${2|Bloc,Cubit|}, $1State>(",
+      "  listener: (context, state) {",
+      "    ${3:// TODO: implement listener}",
+      "  },",
+      "  builder: (context, state) {",
+      "    return ${widget};",
+      "  },",
+      ")"
+    ]
+  },
+  "Repository Provider Snippet": {
+    "perfix": "repoprovider",
+    "body": [
+      "RepositoryProvider(",
+      "  create: (context) => ${1:Subject}Repository(),",
+      "    child: ${widget},",
+      ")"
+    ]
+  },
+  "Multi Bloc Provider Snippet": {
+    "perfix": "multiblocprovider",
+    "body": [
+      "MultiBlocProvider(",
+      "    providers: [",
+      "        ${widget},",
+      "        BlocProvider(",
+      "            create: (context) => ${1:Subject}${2|Bloc,Cubit|}(),",
+      "        ),",
+      "    ],",
+      "    ${child}",
+      ")"
+    ]
+  },
+  "Multi Bloc Listener Snippet": {
+    "perfix": "multibloclistener",
+    "body": [
+      "MultiBlocListener(",
+      "    listeners: [",
+      "        ${widget},",
+      "        BlocListener<${1:Subject}${2|Bloc,Cubit|}, $1State>(",
+      "            listener: (context, state) {",
+      "                ${4:// TODO: implement listener}",
+      "            },",
+      "        ),",
+      "    ],",
+      "    ${child}",
+      ")"
+    ]
+  },
+  "Multi Repository Provider Snippet": {
+    "perfix": "multirepoprovider",
+    "body": [
+      "MultiRepositoryProvider(",
+      "    providers: [",
+      "        ${widget},",
+      "        RepositoryProvider(",
+      "            create: (context) => ${1:Subject}Repository(),",
+      "        ),",
+      "    ],",
+      "    ${child}",
+      ")"
+    ]
+  }
+}
