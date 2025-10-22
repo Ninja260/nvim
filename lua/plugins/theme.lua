@@ -1,1 +1,0 @@
-/home/myomin/.config/omarchy/current/theme/neovim.lua
