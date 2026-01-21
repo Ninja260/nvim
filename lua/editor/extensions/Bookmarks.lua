@@ -38,8 +38,10 @@ vim.keymap.set("n", "m", BookmarksToggle)
 vim.keymap.set("n", "M", BookmarksToggleLabeled)
 vim.keymap.set("n", "]j", BookmarksJumpToNext)
 vim.keymap.set("n", "[j", BookmarksJumpToPrevious)
-vim.keymap.set("n", "<leader>j", BookmarksList)
-vim.keymap.set("n", "<leader>J", BookmarksWorkspaceList)
+vim.keymap.set("n", "<leader>jj", BookmarksList)
+vim.keymap.set("n", "<leader>jc", BookmarksClear)
+vim.keymap.set("n", "<leader>jk", BookmarksWorkspaceList)
+vim.keymap.set("n", "<leader>jkc", BookmarksClearAll)
 
 -- Commands
 vim.api.nvim_create_user_command("VSCodeMarks", function()
