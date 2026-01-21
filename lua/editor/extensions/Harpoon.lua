@@ -2,27 +2,39 @@ local vscode = require("vscode")
 
 -- VSCode Harpoon Extension API
 function HarpoonAdd()
-  vscode.call("vscode-harpoon.addEditor")
+  vscode.call("cursor-harpoon.addEditor")
+end
+
+function HarpoonAddI(index)
+  return function()
+    vscode.call(string.format("cursor-harpoon.addEditor%d", index))
+  end
 end
 
 function HarpoonList()
-  vscode.call("vscode-harpoon.editorQuickPick")
+  vscode.call("cursor-harpoon.editorQuickPick")
 end
 
 function HarpoonEdit()
-  vscode.call("vscode-harpoon.editEditors")
+  vscode.call("cursor-harpoon.editEditors")
 end
 
 function HarpoonGoTo(index)
   return function()
-    vscode.call(string.format("vscode-harpoon.gotoEditor%d", index))
+    vscode.call(string.format("cursor-harpoon.gotoEditor%d", index))
   end
+end
+
+function HarpoonClear()
+  vscode.call("cursor-harpoon.clearEditors")
 end
 
 -- Keymaps
 vim.keymap.set({ "n", "x" }, "<leader>H", HarpoonAdd)
-vim.keymap.set({ "n", "x" }, "<C-e>", HarpoonList)
-vim.keymap.set({ "n", "x" }, "<leader>h", HarpoonEdit)
+-- vim.keymap.set({ "n", "x" }, "<C-e>", HarpoonList)
+vim.keymap.set({ "n", "x" }, "<leader>hh", HarpoonList)
+vim.keymap.set({ "n", "x" }, "<leader>hc", HarpoonClear)
+-- vim.keymap.set({ "n", "x" }, "<leader>h", HarpoonEdit)
 vim.keymap.set({ "n", "x" }, "<leader>1", HarpoonGoTo(1))
 vim.keymap.set({ "n", "x" }, "<leader>2", HarpoonGoTo(2))
 vim.keymap.set({ "n", "x" }, "<leader>3", HarpoonGoTo(3))
@@ -32,3 +44,13 @@ vim.keymap.set({ "n", "x" }, "<leader>6", HarpoonGoTo(6))
 vim.keymap.set({ "n", "x" }, "<leader>7", HarpoonGoTo(7))
 vim.keymap.set({ "n", "x" }, "<leader>8", HarpoonGoTo(8))
 vim.keymap.set({ "n", "x" }, "<leader>9", HarpoonGoTo(9))
+
+vim.keymap.set({ "n", "x" }, "<leader>z1", HarpoonAddI(1))
+vim.keymap.set({ "n", "x" }, "<leader>z2", HarpoonAddI(2))
+vim.keymap.set({ "n", "x" }, "<leader>z3", HarpoonAddI(3))
+vim.keymap.set({ "n", "x" }, "<leader>z4", HarpoonAddI(4))
+vim.keymap.set({ "n", "x" }, "<leader>z5", HarpoonAddI(5))
+vim.keymap.set({ "n", "x" }, "<leader>z6", HarpoonAddI(6))
+vim.keymap.set({ "n", "x" }, "<leader>z7", HarpoonAddI(7))
+vim.keymap.set({ "n", "x" }, "<leader>z8", HarpoonAddI(8))
+vim.keymap.set({ "n", "x" }, "<leader>z9", HarpoonAddI(9))
