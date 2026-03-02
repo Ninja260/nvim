@@ -29,6 +29,10 @@ return {
       -- don't catch any exceptions
       exception_breakpoints = {},
     },
+    -- outline = {
+    --   open_cmd = "30vnew", -- command to use to open the outline buffer
+    --   auto_open = false, -- if true this will open the outline automatically when it is first populated
+    -- },
     dev_log = {
       open_cmd = "20new",
       filter = function(line)
