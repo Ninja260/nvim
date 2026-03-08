@@ -18,7 +18,8 @@ return {
     vim.keymap.set("n", "<leader>ah", function()
       require("dapui").toggle()
     end, { desc = "Flutter:DapUI Toggle" })
-    vim.keymap.set("n", "<leader>ar", "<cmd>FlutterLspRestart<cr>", { desc = "Flutter:Restart LSP" })
+    vim.keymap.set("n", "<leader>aR", "<cmd>FlutterLspRestart<cr>", { desc = "Flutter:Restart LSP" })
+    vim.keymap.set("n", "<leader>ar", "<cmd>FlutterReanalyze<cr>", { desc = "Flutter:Reanalyze LSP" })
 
     -- require("telescope").load_extension("flutter")
   end,
