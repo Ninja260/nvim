@@ -64,6 +64,10 @@ function GoToReferences()
   vscode.call("editor.action.goToReferences")
 end
 
+function PeekReferences()
+  vscode.call("editor.action.referenceSearch.trigger")
+end
+
 function SwitchRecent()
   vscode.call("workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup")
   vscode.call("list.select")

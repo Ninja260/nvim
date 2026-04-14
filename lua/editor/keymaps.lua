@@ -22,7 +22,8 @@ vim.keymap.set({ "n", "x" }, "<leader>r", RenameSymbol)
 vim.keymap.set({ "n", "x" }, "<leader>?", OpenCommandPalette)
 
 -- Goto
-vim.keymap.set({ "n", "x" }, "gr", GoToReferences)
+vim.keymap.set({ "n", "x" }, "gr", PeekReferences)
+vim.keymap.set({ "n", "x" }, "gR", GoToReferences)
 vim.keymap.set({ "n", "x" }, "ga", SwitchRecent)
 vim.keymap.set({ "n", "x" }, "g.", GoToLastEditLocation)
 
